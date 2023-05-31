@@ -39,6 +39,6 @@ def app_specific_action(webdriver, datasets):
         def sub_measure():
             page.go_to_url(f"{CONFLUENCE_SETTINGS.server_url}/pages/viewpage.action?pageId={app_specific_page_id}")
             page.wait_until_visible((By.ID, "title-text"))  # Wait for title field visible
-            page.wait_until_visible((By.CSS_SELECTOR, '[data-macro-name="viable-tile"]'))
+            page.wait_until_visible((By.CSS_SELECTOR, '[data-macro-name="state-swapper-macro"]'))
             sub_measure()
     measure()
